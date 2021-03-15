@@ -1,16 +1,15 @@
-package umn.ac.myaudioplayer;
+package umn.ac.uts_32871;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AlbumFragment#newInstance} factory method to
+ * Use the {@link umn.ac.myaudioplayer.AlbumFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class AlbumFragment extends Fragment {
@@ -37,8 +36,8 @@ public class AlbumFragment extends Fragment {
      * @return A new instance of fragment AlbumFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AlbumFragment newInstance(String param1, String param2) {
-        AlbumFragment fragment = new AlbumFragment();
+    public static umn.ac.uts_32871.AlbumFragment newInstance(String param1, String param2) {
+        umn.ac.uts_32871.AlbumFragment fragment = new umn.ac.uts_32871.AlbumFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
