@@ -1,13 +1,18 @@
 package umn.ac.uts_32871;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -25,6 +30,8 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
+import static umn.ac.uts_32871.Login.udhLogin;
+
 public class LaguLagu extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 1;
@@ -34,6 +41,11 @@ public class LaguLagu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pilih_lagu);
         permission();
+        if(udhLogin){
+            showStartDialog();
+            udhLogin = false;
+        }
+
 
     }
 
@@ -66,7 +78,6 @@ public class LaguLagu extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new SongsFragment(), "Songs");
-        viewPagerAdapter.addFragments(new SongsFragment(), "Albums");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -130,5 +141,37 @@ public class LaguLagu extends AppCompatActivity {
             cursor.close();
         }
         return tempAudioList;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.Profile){
+            Intent i = new Intent(LaguLagu.this, Profil.class);
+            startActivity(i);
+            finish();
+            return true;
+        }else if(id == R.id.Logout){
+            Intent i = new Intent(LaguLagu.this, MainActivity.class);
+            startActivity(i);
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void showStartDialog() {
+        new AlertDialog.Builder(this).setTitle("              Selamat Datang").setMessage("   Attar Kusuma Pratiwa - 00000032871").setPositiveButton("OK", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        }).create().show();
     }
 }

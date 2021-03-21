@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Login extends AppCompatActivity {
     private Button tombolLogin;
     EditText txtUsername, txtPassword;
+    static boolean udhLogin;
     TextView notis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,5 +39,6 @@ public class Login extends AppCompatActivity {
     private void masuk(){
         Intent intent = new Intent(this, LaguLagu.class);
         startActivity(intent);
+        udhLogin = true;
     }
 }

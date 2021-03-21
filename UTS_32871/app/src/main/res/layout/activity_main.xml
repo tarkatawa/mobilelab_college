@@ -5,24 +5,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@color/black">
 
-
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="MUSIC PLAYER"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        android:layout_marginTop="110dp"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
-        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_height="170dp"
+        android:src="@drawable/musictar"
         android:layout_marginTop="20dp"
         />
 
@@ -31,8 +23,11 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="0dp"
         android:text="PROFIL"
+        android:textColor="#429F77"
+        android:backgroundTint="#434343"
+        android:textStyle="bold"
         />
 
     <Button
@@ -41,7 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="LOGIN" />
+        android:text="LOGIN"
+        android:textColor="#429F77"
+        android:backgroundTint="#434343"
+        android:textStyle="bold"/>
 
 
 </LinearLayout>

@@ -5,24 +5,25 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    >
 
     <TextView
         android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="MUSIC PLAYER"
+        android:text=""
         android:textColor="#000000"
         android:textSize="36sp"
         android:layout_marginTop="110dp"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/LogoView"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
-        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_height="170dp"
+        android:src="@drawable/musictar"
         android:layout_marginTop="20dp"
         />
 
@@ -30,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Username"
-        android:layout_marginLeft="75dp"/>
+        android:layout_marginLeft="75dp"
+        android:textColor="#429F77"/>
     <LinearLayout
         android:layout_height="60dp"
         android:layout_width="match_parent"
@@ -41,7 +43,14 @@
             android:id="@+id/txtUsername"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:hint="Masukkan Username" />
+            android:hint="Masukkan Username"
+            android:textColor="@color/white"
+            android:shadowColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            android:textColorLink="@color/white"/>
 
     </LinearLayout>
     <TextView
@@ -49,6 +58,7 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:layout_marginTop="5dp"
+        android:textColor="#429F77"
         android:layout_marginLeft="75dp"/>
     <LinearLayout
         android:layout_height="60dp"
@@ -58,7 +68,16 @@
             android:id="@+id/txtPassword"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:hint="Masukkan Password" />
+            android:inputType="textPassword"
+            android:hint="Masukkan Password"
+            android:textColor="@color/white"
+            android:shadowColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            android:textColorLink="@color/white"/>
+
     </LinearLayout>
 
     <TextView
@@ -74,7 +93,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="23dp"
-        android:text="Login"/>
+        android:text="Login"
+        android:textColor="#429F77"
+        android:backgroundTint="#434343"/>
 
 
 </LinearLayout>
