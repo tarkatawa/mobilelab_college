@@ -72,3 +72,5 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.SiViewHolder
         return art;
     }
 }
+
+
