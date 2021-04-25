@@ -12,8 +12,7 @@ public class MahasiswaRepository {
     private LiveData<List<Mahasiswa>> daftarMahasiswa;
 
     MahasiswaRepository(Application app){
-        MahasiswaRoomDatabase db =
-                MahasiswaRoomDatabase.getDatabase(app);
+        MahasiswaRoomDatabase db = MahasiswaRoomDatabase.getDatabase(app);
         daoMahasiswa = db.daoMahasiswa();
         daftarMahasiswa = daoMahasiswa.getAllMahasiswa();
     }

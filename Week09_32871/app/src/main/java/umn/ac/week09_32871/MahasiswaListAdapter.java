@@ -27,8 +27,7 @@ public class MahasiswaListAdapter extends RecyclerView.Adapter<MahasiswaListAdap
         return new MahasiswaViewHolder(itemView);
     }
     @Override
-    public void onBindViewHolder(@NonNull MahasiswaViewHolder holder,
-                                 int position) {
+    public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
         if(daftarMahasiswa != null){
             Mahasiswa mhs = daftarMahasiswa.get(position);
             holder.tvNim.setText(mhs.getNim());
